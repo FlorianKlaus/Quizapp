@@ -73,7 +73,12 @@ function showQuestion() {
     document.getElementById("rightAnswers").innerHTML = rightAnswers;
     
   } else {
+    let percent = (currentQuestion + 1) / questions.length;
+    percent = Math.round(percent * 100);
+    document.getElementById('progress').innerHTML = `${percent} %`;
+    document.getElementById('progress').style = `width: ${percent}%;`;
     let question = questions[currentQuestion];
+    
     document.getElementById("currentquestion").innerHTML = currentQuestion + 1;
     document.getElementById("question").innerHTML = question["question"];
     document.getElementById("answer_1").innerHTML = question["answer_1"];
