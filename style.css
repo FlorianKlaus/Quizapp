@@ -1,42 +1,51 @@
-body{
-    background-color:#27345B !important;
-    min-height: 100vh;
+body {
+  background-color: #27345b !important;
+  min-height: 100vh;
 }
 
-.container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.question-footer{
-    border-top: 1px solid rgba(0, 0, 0, 0.4);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 12px;
+.question-footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 12px;
 }
 
-.quiz-card{
-    width: 25rem !important;
+.quiz-card {
+  width: 25rem !important;
 }
 
 .quiz-answer-card:hover {
-    background-color: rgba(0, 0, 0, 0.1);
-    cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 
-.bg-success, .bg-danger{
-    color:white !important;
+.bg-success,
+.bg-danger {
+  color: white !important;
 }
 
-img, .card-img-top{
-    height: 50px;
-    width: 50px !important;
+img,
+.card-img-top {
+  height: 50px;
+  width: 50px !important;
 }
 
+.bg-body-tertiary {
+  background-color: #27345b !important;
+}
 
-.bg-body-tertiary{
-    background-color:#27345B !important;
+.winner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100% !important;
+  height: auto!important;
 }
 
