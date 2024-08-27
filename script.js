@@ -64,6 +64,7 @@ function init(){
     showQuestion();
 };
 
+
 function showQuestion(){
     let question = questions[currentQuestion];
 
@@ -86,4 +87,24 @@ function answer(selection){
         document.getElementById(selection).parentNode.classList.add('bg-danger');
         document.getElementById(idofRightAnswer).parentNode.classList.add('bg-success');
     }
+    document.getElementById('next-button').disabled = false;
+}
+
+function nextPage(){
+   currentQuestion ++;
+   document.getElementById('next-button').disabled = true;
+   resetButtons();
+   showQuestion();
+   document.getElementById('currentquestion').innerHTML = currentQuestion+1;
+}
+
+function resetButtons(){
+    document.getElementById('answer_1').parentNode.classList.remove('bg-danger');
+    document.getElementById('answer_1').parentNode.classList.remove('bg-success');
+    document.getElementById('answer_2').parentNode.classList.remove('bg-danger');
+    document.getElementById('answer_2').parentNode.classList.remove('bg-success');
+    document.getElementById('answer_3').parentNode.classList.remove('bg-danger');
+    document.getElementById('answer_3').parentNode.classList.remove('bg-success');
+    document.getElementById('answer_4').parentNode.classList.remove('bg-danger');
+    document.getElementById('answer_4').parentNode.classList.remove('bg-success');
 }

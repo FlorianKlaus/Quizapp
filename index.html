@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>QuizzApp</title>
     <link rel="stylesheet" href="style.css" />
     <script src="script.js"></script>
 
@@ -25,12 +25,12 @@
   <body onload="init()">
     <nav class="navbar bg-body-tertiary">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">QuizApp</a>
+        <img src="./img/logo.png" alt="">
       </div>
     </nav>
     <div class="container">
       <div class="card quiz-card" style="width: 18rem">
-        <img src="" class="card-img-top" alt="..." />
+        <img src="./img/brain result.png" class="card-img-top" alt="..." />
         <div class="card-body">
           <h5 class="card-title" id="question">Frage</h5>
           <div class="card quiz-answer-card mb-2" onclick="answer('answer_1')">
@@ -46,8 +46,8 @@
             <div class="card-body" id="answer_4">Antwort</div>
           </div>
           <div class="question-footer">
-            <span> <b>1</b> von <b id="allquestions">5</b> Fragen </span>
-            <button class="btn btn-primary">Nächste Frage</button>
+            <span> <b id="currentquestion">1</b> von <b id="allquestions">5</b> Fragen </span>
+            <button onclick="nextPage()" id="next-button" class="btn btn-primary" disabled>Nächste Frage</button>
           </div>
         </div>
       </div>

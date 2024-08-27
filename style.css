@@ -29,3 +29,14 @@ body{
 .bg-success, .bg-danger{
     color:white !important;
 }
+
+img, .card-img-top{
+    height: 50px;
+    width: 50px !important;
+}
+
+
+.bg-body-tertiary{
+    background-color:#27345B !important;
+}
+
