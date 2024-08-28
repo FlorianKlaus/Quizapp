@@ -35,7 +35,7 @@ let questions = [
   {
     question: "Welche Krankheit war auf Piratenschiffen weit verbreitet?",
     answer_1: "Skorbut",
-    answer_2: "Tripper",
+    answer_2: "Tumore",
     answer_3: "Aids",
     answer_4: "Erkältung",
     right_answer: 1,
@@ -70,15 +70,15 @@ function showQuestion() {
   if (currentQuestion >= questions.length) {
     Finish();
     document.getElementById("allquestions").innerHTML = questions.length;
-    document.getElementById("rightAnswers").innerHTML = rightAnswers;
-    
-  } else {
+    document.getElementById("rightAnswers").innerHTML = rightAnswers; 
+  } else
+   {
     let percent = (currentQuestion + 1) / questions.length;
     percent = Math.round(percent * 100);
-    document.getElementById('progress').innerHTML = `${percent} %`;
-    document.getElementById('progress').style = `width: ${percent}%;`;
+    document.getElementById("progress").innerHTML = `${percent} %`;
+    document.getElementById("progress").style = `width: ${percent}%;`;
     let question = questions[currentQuestion];
-    
+
     document.getElementById("currentquestion").innerHTML = currentQuestion + 1;
     document.getElementById("question").innerHTML = question["question"];
     document.getElementById("answer_1").innerHTML = question["answer_1"];
@@ -124,7 +124,13 @@ function resetButtons() {
   document.getElementById("answer_4").parentNode.classList.remove("bg-success");
 }
 
-function Finish(){
-    document.getElementById("container").innerHTML = `<img class="winner" src="./img/completed.png"><br><div>Du hast <b id="rightAnswers" >xxx</b> von <b id="allquestions">xxx</b> Fragen richtig beantwortet!  </div> `;
-    document.getElementById("container").style = 'display: flex; justify-content: center; flex-direction: column;';
+function Finish() {
+  document.getElementById("container").innerHTML = 
+    `<img class="winner" src="./img/completed.png">
+  <br>
+  <div>
+    Du hast <b id="rightAnswers" >xxx</b> von <b id="allquestions">xxx</b> Fragen richtig beantwortet!  
+  </div> `;
+  document.getElementById("container").style =
+    "display: flex; justify-content: center; flex-direction: column;";
 }
